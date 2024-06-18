@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новый заказ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-500 p-4 text-white flex justify-between">
+        <h1 class="text-xl">CRM Система</h1>
+        <a href="index.html" class="bg-gray-500 text-white p-2 rounded">Назад к списку</a>
+    </nav>
+    <div class="container mx-auto mt-8 px-4">
+        <div class="w-full lg:w-1/2 mx-auto p-4">
+            <h2 class="text-lg font-bold mb-4">Новый заказ</h2>
+            <form id="orderForm">
+                <input type="hidden" id="orderId">
+                <div class="mb-4">
+                    <label for="customerName" class="block text-gray-700">Покупатель:</label>
+                    <input type="text" id="customerName" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="supplierName" class="block text-gray-700">Поставщик:</label>
+                    <input type="text" id="supplierName" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="orderDate" class="block text-gray-700">Дата приема заказа:</label>
+                    <input type="date" id="orderDate" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="dueDate" class="block text-gray-700">Изготовить до:</label>
+                    <input type="date" id="dueDate" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="productDetails" class="block text-gray-700">Товар и количество:</label>
+                    <textarea id="productDetails" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="productImage" class="block text-gray-700">Изображение товара:</label>
+                    <input type="file" id="productImage" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="paymentDate" class="block text-gray-700">Дата оплаты:</label>
+                    <input type="date" id="paymentDate" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="comment" class="block text-gray-700">Комментарий:</label>
+                    <textarea id="comment" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="productionStatus" class="block text-gray-700">Статус производства:</label>
+                    <select id="productionStatus" class="w-full p-2 border border-gray-300 rounded">
+                        <option value="Передан на производство">Передан на производство</option>
+                        <option value="Готов">Готов</option>
+                        <option value="Отгружен">Отгружен</option>
+                        <option value="Отгружен частично">Отгружен частично</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="paymentStatus" class="block text-gray-700">Статус оплаты:</label>
+                    <select id="paymentStatus" class="w-full п-2 border border-gray-300 rounded">
+                        <option value="Ожидание оплаты">Ожидание оплаты</option>
+                        <option value="Оплачен">Оплачен</option>
+                        <option value="Оплачен частично">Оплачен частично</option>
+                        <option value="Отменен">Отменен</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Добавить заказ</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

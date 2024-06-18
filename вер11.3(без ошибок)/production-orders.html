@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказы в производстве</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-500 p-4 text-white flex justify-between">
+        <h1 class="text-xl">CRM Система</h1>
+        <a href="index.html" class="bg-gray-500 text-white p-2 rounded">Назад к списку</a>
+    </nav>
+    <div class="container mx-auto mt-8 px-4">
+        <div class="flex flex-wrap">
+            <div class="w-full p-4">
+                <h2 class="text-lg font-bold mb-4">Заказы в производстве и готовые заказы</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">Покупатель</th>
+                                <th class="py-2 px-4 border-б">Поставщик</th>
+                                <th class="py-2 px-4 border-б">Дата приема заказа</th>
+                                <th class="py-2 px-4 border-б">Изготовить до</th>
+                                <th class="py-2 px-4 border-б">Товар и количество</th>
+                                <th class="py-2 px-4 border-б">Дата оплаты</th>
+                                <th class="py-2 px-4 border-б">Комментарий</th>
+                                <th class="py-2 px-4 border-б">Статус производства</th>
+                                <th class="py-2 px-4 border-б">Статус оплаты</th>
+                                <th class="py-2 px-4 border-б">Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productionOrderList">
+                            <!-- Заказы будут добавляться здесь -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+        <img id="modalImage" class="max-w-full max-h-full">
+        <button id="closeModal" class="absolute top-4 right-4 bg-red-500 text-white p-2 rounded">Закрыть</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
